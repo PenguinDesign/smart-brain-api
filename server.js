@@ -9,6 +9,7 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => { res.send('it works') });
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 app.post('/demographics', (req, res) => { image.handleDemographics(req, res) })
 
